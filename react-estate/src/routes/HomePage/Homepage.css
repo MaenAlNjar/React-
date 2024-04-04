@@ -1,0 +1,38 @@
+.homepage {
+  display: flex;
+  height: 100%;
+}
+.homepage .textcontain {
+  flex: 3;
+}
+.homepage .wrapper {
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  height: 100%;
+}
+.homepage .title {
+  font-size: 54px;
+}
+.homepage .imgeContainer {
+  flex: 2;
+  background-color: #fcf5f3;
+}
+/* perant shout be relative to make childran abslout*/
+.homepage .imgeContainer img {
+  width: 100%;
+  height: 99.5%;
+}
+.homepage .boxes {
+  display: flex;
+  justify-content: space-between;
+}
+.homepage .boxes .box h1 {
+  font-size: 36px;
+}
+.homepage .boxes .box h2 {
+  font-size: 20px;
+  font-weight: 300;
+}

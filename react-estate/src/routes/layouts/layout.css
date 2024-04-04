@@ -10,7 +10,6 @@
   height: calc(100vh - 100px);
 }
 
-
 @media (max-width: 1536px) {
   .layout {
     max-width: 1366px;

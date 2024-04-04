@@ -4,51 +4,77 @@ nav {
   height: 100px;
   align-items: center;
 }
-nav a {
+nav .left a {
   transition: all 0.4s ease;
+  color: black;
+  text-decoration: none;
 }
 nav a:hover {
   transform: scale(1.05);
 }
-.left {
+nav .left {
   flex: 3;
   display: flex;
   align-items: center;
   gap: 50px;
 }
 
-.right {
+nav .right {
   display: flex;
   flex: 2;
   align-items: center;
   justify-content: flex-end;
   height: 100%;
+  background-color: #fcf5f3;
 }
-.right a {
+nav .right a {
   padding: 12px 24px;
   margin: 20px;
 }
-.logo {
+nav .right .user {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+nav .right .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+nav .right .user .profile {
+  padding: 12px 24px;
+  background-color: #fece51;
+  cursor: pointer;
+  border: none;
+}
+nav .right .user .profile {
+  text-decoration: none;
+  color: black;
+}
+nav .logo {
   font-weight: bold;
   font-size: 20px;
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.register {
-  background-color: rgb(255, 193, 118);
+nav .right .register {
+  background-color: rgb(249, 165, 61);
 }
-.miniicon {
+nav .right .miniicon {
   display: none;
   z-index: 999;
 }
-.miniicon img {
+nav .right .miniicon img {
   width: 36px;
   height: 36px;
   cursor: pointer;
 }
-.menu {
-  position: absolute;
+nav .right .menu {
+  position: fixed;
   top: 0;
   right: -50%;
   background-color: black;
@@ -67,16 +93,18 @@ nav a:hover {
   nav a {
     display: none;
   }
-  .logo span {
+  nav .left .logo span {
     display: none;
   }
-  .miniicon {
+  nav .right .miniicon {
     display: block;
   }
-  .menu.active {
+  nav .right .menu.active {
     right: 0;
   }
-  .menu.active a{
+  nav .right .menu.active a {
     display: initial;
+    color: white;
+    text-decoration: none;
   }
 }
