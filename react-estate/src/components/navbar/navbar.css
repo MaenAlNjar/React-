@@ -4,7 +4,7 @@ nav {
   height: 100px;
   align-items: center;
 }
-nav .left a {
+nav  a {
   transition: all 0.4s ease;
   color: black;
   text-decoration: none;

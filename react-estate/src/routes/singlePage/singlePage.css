@@ -150,11 +150,11 @@
   width: 100%;
   height: 200px;
 }
-.singlePage .featuers .wrapper .bottons {
+.singlePage .featuers .wrapper .buttons {
   display: flex;
   justify-content: space-between;
 }
-.singlePage .featuers .wrapper .bottons button {
+.singlePage .featuers .wrapper .buttons button {
   padding: 20px;
   display: flex;
   align-items: center;

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Homepage.css";
 import SearchBar from "../../components/searchBar/page";
+import {AuthContext} from '../../context/AuthContext'
 const HomePage = () => {
+
+  const {currentUser} =useContext(AuthContext)
+  console.log(currentUser);
   return (
     <div className="homepage">
-      <div className="textcontain">
+      <div className="textContainer">
         <div className="wrapper">
           <h1 className="title">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. ,
@@ -32,7 +36,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="imgeContainer">
+      <div className="imgContainer">
         <img src="./OIP.jpeg" alt="" />
       </div>
     </div>

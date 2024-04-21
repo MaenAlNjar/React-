@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const user = true;
+  const { currentUser } = useContext(AuthContext);
+
+
+
+
   return (
     <nav>
       <div className="left">
@@ -27,26 +32,26 @@ const Navbar = () => {
       </div>
 
       <div className="right">
-        {user ? (
+        {currentUser ? (
           <div className="user">
-            <img src="https://res.cloudinary.com/dmhvb05w3/image/upload/v1693313531/p4/n4xmk2mnmu9rtzukz1ux.jpg" alt="w" className="" />
-            <span>chong dong meng</span>
+            <img src={currentUser?.avatar || "/noavatar.jpg"} alt="" />
+            <span>{currentUser?.username}</span>
             <Link to="/profile" className="profile">
-              Profile
+              <span>Profile</span>
             </Link>
           </div>
         ) : (
           <>
-            <Link herf="/">Sign in </Link>
-            <Link herf="/" className="register">
+            <a href="/login">Sign in</a>
+            <a href="/register" className="register">
               Sign up
-            </Link>
+            </a>
           </>
         )}
 
         <div className="miniicon">
           <img
-            src="./menu.png"
+            src="/menu.png"
             alt="dint work"
             onClick={() => setOpen(!open)}
           />

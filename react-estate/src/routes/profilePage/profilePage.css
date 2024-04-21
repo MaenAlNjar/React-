@@ -2,41 +2,50 @@
   display: flex;
   height: 100%;
 }
-.profilePage .detail {
+
+.profilePage .details {
   flex: 3;
   overflow-y: scroll;
+  padding-bottom: 50px;
 }
-.profilePage .detail .wrapper {
+
+.profilePage .details .wrapper {
   padding-right: 50px;
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
-.profilePage .detail .wrapper .title {
+
+.profilePage .details .wrapper .title {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.profilePage .detail .wrapper .title h1 {
+
+.profilePage .details .wrapper .title h1 {
   font-weight: 300;
 }
-.profilePage .detail .wrapper .title button {
+
+.profilePage .details .wrapper .title button {
   padding: 12px 24px;
   background-color: #fece51;
   cursor: pointer;
   border: none;
 }
-.profilePage .detail .wrapper .info {
+
+.profilePage .details .wrapper .info {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.profilePage .detail .wrapper .info span {
+
+.profilePage .details .wrapper .info span {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.profilePage .detail .wrapper .info button {
+
+.profilePage .details .wrapper .info button {
   width: 100px;
   background-color: teal;
   border: none;
@@ -46,36 +55,20 @@
   border-radius: 5px;
 }
 
-.profilePage .detail .wrapper .info img {
+.profilePage .details .wrapper .info img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/*------------------------------------------------------*/
 .profilePage .chatContainer {
   flex: 2;
   background-color: #fcf5f3;
   height: 100%;
 }
+
 .profilePage .chatContainer .wrapper {
   padding: 0px 20px;
   height: 100%;
-}
-@media screen and (max-width: 768px) {
-  .profilePage {
-    flex-direction: column;
-    overflow: scroll;
-  }
-
-  .profilePage .details {
-    flex: none;
-    height: max-content;
-  }
-
-  .profilePage .chatContainer {
-    flex: none;
-    height: max-content;
-  }
 }
