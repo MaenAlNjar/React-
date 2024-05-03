@@ -14,13 +14,7 @@ const allowedOrigins = [
   "https://66340d14aae3305a62f53655--reliable-sopapillas-d0f3c7.netlify.app", // Add your frontend URL(s) here
 ];
 const corsOptions = {
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
+  origin: '*',
   credentials: true,
 };
 app.use(cors(corsOptions));
