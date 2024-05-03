@@ -11,7 +11,7 @@ const app = express();
 
 // Middleware
 const allowedOrigins = [
-  "http://localhost:5173", // Add your frontend URL(s) here
+  "https://66340d14aae3305a62f53655--reliable-sopapillas-d0f3c7.netlify.app", // Add your frontend URL(s) here
 ];
 const corsOptions = {
   origin: (origin, callback) => {
